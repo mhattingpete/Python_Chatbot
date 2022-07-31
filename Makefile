@@ -23,6 +23,12 @@ update_requirements:
 test:
 	$(VENV)/pytest
 
+run_app:
+	$(VENV)/python src/app.py
+
+run_python: 
+	$(VENV)/python $(script)
+
 docs_view:
 	@echo View API documentation... 
 	pdoc src --http localhost:8080
