@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/stylesheet.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/script.js"></script>
+</head>
+<body>
+<div>
+	<div class='container'>
+		<h1>Chatbox UI</h1>
+		<div id="chat__circle" class="btn btn-raised">
+			<div id="chat-overlay"></div>
+			<i class="material-icons">chat</i>
+		</div>
+		<div class='chatbox'>
+			<div class="chatbox__header">
+				ChatBot  
+				<span class="chatbox__toggle"><i class="material-icons">close</i></span>
+			</div>
+			<div class="chatbox__logs">
+				<div class="chatbox__messages">
+					<div class="chatbox__messages__user-message">
+						<div class="chatbox__messages__user-message--ind-message">
+							<p class="name">Bot</p>
+							<br/>
+							<p class="message">Hello!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="chatbox__input">
+				<form>
+					<input type="text" id="chatbox__input" name="chatbox__input" placeholder="Send a message..." />
+					<button type="submit" class="chatbox__submit" id="chatbox__submit"><i class="material-icons">send</i></button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
