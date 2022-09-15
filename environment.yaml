@@ -1,0 +1,13 @@
+name: venv
+
+channels:
+  - default
+  - conda-forge
+
+dependencies:
+  - python=3.9
+  - poetry
+  - pytorch::pytorch=1.12.1=py3.9_cpu_0
+  - pytorch::pytorch-mutex=1.0=cpu
+  - pytorch::torchaudio=0.12.1=py39_cpu
+  - pytorch::torchvision=0.13.1=py39_cpu

@@ -1,9 +1,9 @@
 import logging
 
 from flask import Flask, render_template, request
-from hydra import compose, initialize
 
-from chatbot import Chatbot
+import models
+from utils import get_model_attr, load_config
 
 app = Flask(__name__)
 
@@ -18,10 +18,10 @@ logger.setLevel(logging.DEBUG)
 def get_bot():
     logger.info("Initializing chatbot")
     # context initialization
-    with initialize(version_base=None, config_path="../config", job_name="chatbot_app"):
-        config = compose(config_name="main")
-        bot = Chatbot(config)
-        logger.info("Chatbot initialized")
+    config = load_config(config_path="../config", config_name="main")
+    botcls = getattr(models, get_model_attr(config, "type", "DialogChatbot"))
+    bot = botcls(config)
+    logger.info(f"{bot} initialized")
     return bot
 
 
@@ -29,7 +29,7 @@ bot = get_bot()
 
 
 def main():
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=False)
 
 
 @app.route("/")

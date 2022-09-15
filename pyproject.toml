@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "python_chatbot"
+version = "0.1.0"
+description = ""
+authors = ["Martin Hatting Petersen <petersen2630@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Flask = "^2.2.2"
+transformers = "^4.21.2"
+datasets = "^2.4.0"
+hydra-core = "^1.2.0"
+fastapi = "^0.81.0"
+uvicorn = "^0.18.3"
+accelerate = "^0.12.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

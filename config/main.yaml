@@ -1,5 +1,5 @@
 defaults:
-  - model: model1
+  - model: QA/distilbert #retriever/RAG # dialog/dialogpt
   - _self_
 
 raw: 

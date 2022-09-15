@@ -1,0 +1,4 @@
+name: RAG
+pretrained_model: facebook/rag-token-base # facebook/rag-token-nq
+type: RetrievalChatbot
+index_name: exact
